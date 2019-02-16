@@ -1,17 +1,17 @@
-
 function initStorage() {
-    browser.storage.local.set({
-        "time": null,
-        "websites": [] 
-    })
+  browser.storage.local.set({
+    time: null,
+    websites: []
+  });
 }
 
 function getInterval() {
-    return browser.storage.local
+  return browser.storage.local
     .get("time")
-    .then(success("Getinterval"), onError("Getinterval"))
+    .then(success("Getinterval"), onError("Getinterval"));
 }
 
+/*
 function setInterval(start, end) {
   let time = {
     start: start,
@@ -36,9 +36,10 @@ function addWebsite(w) {
     .set({getInterval(), content})
     .then(success("Addwebsite"), onError("Addwebsite"));
 }
+*/
 
 function exists(w) {
-    return Object.values( getWebsites() ).some((s) => (s === w))
+  return Object.values(getWebsites()).some(s => s === w);
 }
 
 function success(s) {

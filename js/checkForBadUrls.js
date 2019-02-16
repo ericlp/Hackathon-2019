@@ -1,4 +1,4 @@
-store.initStorage();
+initStorage();
 
 function getHostname(url) {
   if (url == null) {
@@ -26,7 +26,9 @@ function handleUpdated(tabId, changeInfo, tabInfo) {
   if (hostname != null) {
     if (hostname == "chalmers.it") {
       console.log("SHOULD CLOSE YE FUCK!" + tabInfo.tabId);
-      browser.tabs.remove(tabInfo.id);
+      if (tabInfo.tabId != null) {
+        browser.tabs.remove(tabInfo.id);
+      }
     }
   }
 }
