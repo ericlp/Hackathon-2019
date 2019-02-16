@@ -1,3 +1,5 @@
+store.initStorage();
+
 function getHostname(url) {
   if (url == null) {
     return null;
