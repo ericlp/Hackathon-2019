@@ -4,6 +4,9 @@
   "description": "An extension to help you be more productive",
   "version": "1.0",
   "manifest_version": 2,
+  "background": {
+    "scripts": ["js/checkForBadUrls.js"]
+  },
   "browser_action": {
     "default_popup": "popup/popup.html",
     "default_icon": {
