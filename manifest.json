@@ -16,6 +16,18 @@
   "icons": {
     "128": "images/img128.png"
   },
-  "permissions": ["activeTab", "tabs", "storage", "<all_urls>"],
-  "web_accessible_resources": ["insults.json"]
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "storage",
+    "<all_urls>",
+    "notifications"
+  ],
+  "web_accessible_resources": ["insults.json"],
+  "content_script": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contents/content.js"]
+    }
+  ]
 }

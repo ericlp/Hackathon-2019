@@ -25,8 +25,8 @@ function handleUpdated(tabId, changeInfo, tabInfo) {
   var hostname = getHostname(tabInfo.url);
   if (hostname != null) {
     if (hostname == "chalmers.it") {
-      console.log("SHOULD CLOSE YE FUCK!" + tabInfo.tabId);
-      if (tabInfo.tabId != null) {
+      if (tabInfo.id != null) {
+        browser.tabs.sendMessage(tabInfo.id, "command: insult");
         browser.tabs.remove(tabInfo.id);
       }
     }

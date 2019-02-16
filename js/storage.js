@@ -11,7 +11,6 @@ function getInterval() {
     .then(success("Getinterval"), onError("Getinterval"));
 }
 
-/*
 function setInterval(start, end) {
   let time = {
     start: start,
@@ -36,7 +35,6 @@ function addWebsite(w) {
     .set({ websites: content })
     .then(success("Addwebsite"), onError("Addwebsite"));
 }
-*/
 
 function exists(w) {
   return Object.values(getWebsites()).some(s => s === w);
