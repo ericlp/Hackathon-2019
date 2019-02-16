@@ -1,0 +1,20 @@
+{
+  "author": "EricLP, ViddeM",
+  "name": "Be productive you fuck!",
+  "description": "An extension to help you be more productive",
+  "version": "1.0",
+  "manifest_version": 2,
+  "background": {
+    "scripts": ["js/main.js"],
+    "persistant": false
+  },
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "images/img128.png"
+    }
+  },
+  "icons": {
+    "128": "images/img128.png"
+  }
+}
