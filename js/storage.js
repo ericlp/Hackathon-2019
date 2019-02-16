@@ -38,7 +38,7 @@ function addWebsite(w) {
 }
 
 function exists(w) {
-    Object.values( getWebsites() ).some((s) => (s === w))
+    return Object.values( getWebsites() ).some((s) => (s === w))
 }
 
 function success(s) {
