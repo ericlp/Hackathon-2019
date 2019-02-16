@@ -1,7 +1,16 @@
 if (chrome) {
   chrome.runtime.onInstalled.addListener(onInstalled);
 } else {
-  BhxBrowser.runtime.onInstalled.addListener(onInstalled);
+  browser.runtime.onInstalled.addListener(onInstalled);
+  browser.tabs.create({
+    active: true,
+    index: 0,
+    url: "http://www.google.com"
+  });
 }
 
 function onInstalled() {}
+
+function thatFunction() {
+  alert("DerP!");
+}
