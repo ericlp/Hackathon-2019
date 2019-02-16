@@ -15,5 +15,7 @@
   },
   "icons": {
     "128": "images/img128.png"
-  }
+  },
+  "permissions": ["activeTab", "tabs", "storage"],
+  "web_accessible_resources": ["insults.json"]
 }
