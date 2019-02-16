@@ -18,7 +18,7 @@ function setInterval(start, end) {
     end: end
   };
   browser.storage.local
-    .set({time,getWebsites()})
+    .set({ time: time })
     .then(success("Setinterval"), onError("Setinterval"));
 }
 
@@ -33,7 +33,7 @@ function addWebsite(w) {
   let content = browser.storage.local.get(getWebsites);
   content.push(website);
   browser.storage.local
-    .set({getInterval(), content})
+    .set({ websites: content })
     .then(success("Addwebsite"), onError("Addwebsite"));
 }
 */
